@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: gotham
+  labels:
+    app: gotham
+spec:
+  containers:
+    - name: batcave
+      image: kubernetes101_batcave:latest
+      imagePullPolicy: Never
+      ports:
+        - name: http
+          containerPort: 3000
+    - name: gcpd
+      image: kubernetes101_gcpd:latest
+      imagePullPolicy: Never
+      ports:
+        - name: http
+          containerPort: 3001

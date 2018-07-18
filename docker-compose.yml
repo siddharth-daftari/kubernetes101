@@ -1,0 +1,16 @@
+version: '3'
+services:
+  batcave:
+    build:
+      context: batcave/.
+    environment:
+      PYTHONUNBUFFERED: 0
+    ports:
+      - "3000:3000"
+  gcpd:
+    build:
+      context: gcpd/.
+    environment:
+      PYTHONUNBUFFERED: 0
+    ports:
+      - "3001:3001"
