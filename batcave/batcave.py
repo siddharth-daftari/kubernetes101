@@ -6,12 +6,12 @@ app = Flask(__name__)
 def handle_bat_signal():
 
 	#build response json variable
-	responseVar = {
+	response_var = {
 		"response" : "Look behind you"
 	}
 
 	#add/modify properties of response variable
-	response = jsonify(responseVar)
+	response = jsonify(response_var)
 
 	#return the response object
 	return response
